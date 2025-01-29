@@ -14,7 +14,7 @@ android {
             if (project.hasProperty('targetAbi')) {
                 include project.property('targetAbi')
             } else {
-                include "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
+                includeFilter.addAll(["arm64-v8a", "armeabi-v7a", "x86", "x86_64"])
             }
             universalApk false
         }
